@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>com.giacom.methodgen</id>
+    <name>Method Generator</name>
+    <version>1.0</version>
+    <vendor email="sandrogiacom@gmail.com" url="http://www.sandrogiacom.com">Sandro Giacomozzi</vendor>
+
+    <description><![CDATA[
+      Generate method from phrase.<br>
+      <em>Type a sentence and make it a method  </em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+      <action id="methodgen" class="main.java.com.giacom.idea.methodgen.MethodGenAction"
+              text="Method Generator" description="Method Generator from Phrase">
+        <add-to-group group-id="JavaGenerateGroup1" anchor="first"/>
+        <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt n"/>
+      </action>
+    </actions>
+
+</idea-plugin>
